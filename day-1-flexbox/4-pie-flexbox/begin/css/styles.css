@@ -40,12 +40,10 @@ nav ul {
 http://stackoverflow.com/questions/13104818/simple-2-column-navigation-with-css-and-a-single-list */
 nav li:nth-child(even) {
   width: 50%;
-  float: right;
   padding: 0.5em;
 }
 nav li:nth-child(odd) {
   width: 50%;
-  float: left;
     padding: 0.5em;
 }
 nav a {
@@ -59,25 +57,13 @@ nav a:hover {
 }
 
 
-.row:before, 
-.row:after {
-    content:"";
-    display: table;
-    clear:both;
-}
 div.row {
   background-color: #fff6e0;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 1em;
-}
-.floatleft {
-  float: left;
-  margin: 0 1em 1em 0;
-}
-.floatright {
-  float: right;
-  margin: 0 0 1em 1em;
+  display: flex;
+  flex-flow: row nowrap;
 }
 [class*='sidebar'] {
   border: 1px solid #00c4c7;
@@ -155,7 +141,6 @@ footer a {
   .wrapper {
       width: 97%;
       max-width: 767px;
-      float: none;
   }
  .col-1,
  .col-2,
@@ -169,7 +154,6 @@ div.row {
   padding: 0 2em;
 }
 aside[class*='sidebar'] {
-  float: left;
   width: 47%;
   margin-right: 3%;
 }
@@ -178,7 +162,6 @@ aside[class*='sidebar'] {
   nav li:nth-child(even),
   nav li:nth-child(odd) {
     display: inline-block;
-    float: none;
     width: auto;
     padding: 0;
   }
@@ -191,11 +174,9 @@ aside[class*='sidebar'] {
   .wrapper {
       width: 97%;
       max-width: 1200px;
-      float: none;
   }
 
   [class*='col-'] {
-    float: left;
     margin-left: 3.33333%;
     min-height: 1px;
   }
@@ -227,7 +208,6 @@ aside[class*='sidebar'] {
   nav li:nth-child(even),
   nav li:nth-child(odd) {
     display: inline-block;
-    float: none;
     width: auto;
     padding: 0;
   }
